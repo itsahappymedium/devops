@@ -1,0 +1,26 @@
+{
+  "name": "hm-cli",
+  "version": "0.1.0",
+  "description": "Happy Medium's command line tool",
+  "main": "hm-cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/happymedium/hm-cli.git"
+  },
+  "author": "Happy Medium",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "hm": "hm-cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/happymedium/hm-cli/issues"
+  },
+  "homepage": "https://github.com/happymedium/hm-cli",
+  "dependencies": {
+    "commander": "^2.5.0"
+  }
+}

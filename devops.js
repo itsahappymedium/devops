@@ -9,6 +9,7 @@ var chalk = require('chalk');
 
 // Require our plugins
 var devopsServerPilot = require('./lib/devops-serverpilot');
+var devopsBitbucket = require('./lib/devops-bitbucket');
 
 // Initialize ConfigStore to store config variables
 var conf = new ConfigStore( pkg.name );
@@ -22,6 +23,7 @@ program
 
 // Enable our plugins
 devopsServerPilot.set(program, conf);
+devopsBitbucket.set(program, conf);
 
 // Parse everything
 program.parse(process.argv);

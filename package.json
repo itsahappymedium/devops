@@ -1,25 +1,25 @@
 {
-  "name": "hm-cli",
+  "name": "devops",
   "version": "0.1.0",
-  "description": "Happy Medium's command line tool",
-  "main": "hm-cli.js",
+  "description": "A command line tool for DevOps",
+  "main": "devops.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/happymedium/hm-cli.git"
+    "url": "https://github.com/happymedium/devops.git"
   },
   "author": "Happy Medium",
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "hm": "hm-cli.js"
+    "devops": "devops.js"
   },
   "bugs": {
-    "url": "https://github.com/happymedium/hm-cli/issues"
+    "url": "https://github.com/happymedium/devops/issues"
   },
-  "homepage": "https://github.com/happymedium/hm-cli",
+  "homepage": "https://github.com/happymedium/devops",
   "dependencies": {
     "commander": "^2.5.0"
   }

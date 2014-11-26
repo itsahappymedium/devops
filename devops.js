@@ -3,9 +3,6 @@
 var path = require('path');
 var pkg = require( path.join(__dirname, 'package.json') );
 var ConfigStore = require('configstore');
-var prompt = require('prompt');
-var ServerPilot = require('serverpilot-node');
-var chalk = require('chalk');
 
 // Initialize ConfigStore to store config variables
 var conf = new ConfigStore( pkg.name );

@@ -7,10 +7,6 @@ var prompt = require('prompt');
 var ServerPilot = require('serverpilot-node');
 var chalk = require('chalk');
 
-// Require our plugins
-var devopsServerPilot = require('./lib/devops-serverpilot');
-var devopsBitbucket = require('./lib/devops-bitbucket');
-
 // Initialize ConfigStore to store config variables
 var conf = new ConfigStore( pkg.name );
 
@@ -21,9 +17,12 @@ var program = require('commander');
 program
     .version(pkg.version);
 
-// Enable our plugins
-devopsServerPilot.set(program, conf);
-devopsBitbucket.set(program, conf);
+// Require and initialize all plugins inside /lib/
+var normalizedPath = path.join(__dirname, 'lib');
+require('fs').readdirSync(normalizedPath).forEach(function(file) {
+    var service = require('./lib/' + file);
+    service.set(program, conf);
+});
 
 // Parse everything
 program.parse(process.argv);

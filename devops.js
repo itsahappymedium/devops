@@ -14,10 +14,10 @@ var program = require('commander');
 program
     .version(pkg.version);
 
-// Require and initialize all plugins inside /lib/
-var normalizedPath = path.join(__dirname, 'lib');
+// Require and initialize all plugins inside /lib/services
+var normalizedPath = path.join(__dirname, 'lib/services');
 require('fs').readdirSync(normalizedPath).forEach(function(file) {
-    var service = require('./lib/' + file);
+    var service = require('./lib/services/' + file);
     service.set(program, conf);
 });
 
